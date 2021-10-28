@@ -63,7 +63,7 @@ const Roadmap = () => {
           </li>
           <li className="text_sec_14 ">Launch of WhaleMakerDAO</li>
         </ul>
-        )
+        
       </div>
       <div className={styles.roadmapCard}>
         <p className="text_pri_14">Second Wave</p>
@@ -76,7 +76,7 @@ const Roadmap = () => {
           </li>
           <li className="text_sec_14">Launch of Whale Shark Alpha Chat</li>
         </ul>
-        )
+        
       </div>
       <div className={styles.roadmapCard}>
         <p className="text_pri_14">Third Wave</p>
@@ -89,7 +89,7 @@ const Roadmap = () => {
             Stake your Whale Pass to earn 10 $KRILL per day
           </li>
         </ul>
-        )
+        
       </div>
       <div className={styles.roadmapCard}>
         <p className="text_pri_14">Fourth Wave</p>
@@ -102,7 +102,7 @@ const Roadmap = () => {
           <li className="text_sec_14">Premint on partner projects</li>
           <li className="text_sec_14">Whitelist on partner projects</li>
         </ul>
-        )
+        
       </div>
       <div className={styles.roadmapCard}>
         <p className="text_pri_14">Fifth Wave</p>
@@ -112,7 +112,7 @@ const Roadmap = () => {
         <ul>
           <li className="text_sec_14">Coming Soon</li>
         </ul>
-        )
+        
       </div>
       );
     </div>
