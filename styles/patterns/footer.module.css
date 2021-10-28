@@ -1,0 +1,57 @@
+.footer {
+  padding: 2em 3em;
+  background: url(../../public/abstracts/footerAbstract.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  margin-bottom: 10em;
+}
+
+.flexGap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  grid-gap: 1.5em;
+}
+
+.flex a img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.flex a {
+  height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2em;
+  }
+  .content {
+    width: 60%;
+  }
+  .flexGap {
+    flex-direction: column;
+    grid-gap: 1em;
+  }
+  .flexGap p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 75%;
+  }
+}

@@ -1,0 +1,142 @@
+.story {
+  padding: 2em 3em;
+  /* background: url(../../public/abstracts/storyBehindabstract.svg); */
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  margin: 3.2em;
+}
+
+.market {
+  width: "50%";
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 1.25em;
+}
+
+.card {
+  background: #0a131c;
+  border-radius: 8px;
+  width: 15em;
+  padding: 1.5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 80px;
+  height: 80px;
+}
+
+.story_block {
+  /* display: grid;
+  grid-template-columns: 1fr; */
+  width: "50%";
+  margin: 0 auto;
+  /* margin: 1em; */
+}
+
+.block_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-gap: 1.25em;
+}
+
+.block_grid div {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.block_grid div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flexGap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.fish1 {
+  animation: fish1 5s linear infinite;
+  transition: 500ms all;
+  transform: translateX(0);
+}
+
+.fish1:hover {
+  transform: translateX(100px);
+}
+
+@keyframes fish1 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+}
+
+.fish2 {
+  animation: fish2 5s linear infinite;
+}
+
+@keyframes fish2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.fish3 {
+  animation: fish3 15s linear infinite;
+}
+
+@keyframes fish3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(30px, -30px) rotate(-90deg);
+  }
+  50% {
+    transform: translate(30px, -60px) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-30px, -30px) rotate(-270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: 2em;
+  }
+  .market {
+    grid-template-columns: 1fr;
+  }
+  .story_block {
+    grid-template-columns: 1fr;
+    grid-gap: 0.2em;
+  }
+}

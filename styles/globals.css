@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "ncs";
+  src: url(./fonts/ncs.ttf);
+}
+
+@font-face {
+  font-family: "prompt";
+  src: url(./fonts/Prompt.ttf);
+}
+
+:root {
+  --background: #01070d;
+  --card: #0a131c;
+  --textPrimary: #ffffff;
+  --textSecondary: #bfc0c0;
+  --label: #d4d4d4;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--textSecondary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "prompt";
+  padding: 0;
+  margin: 0;
+}
+
+.mb-10 {
+  margin-bottom: 0.6em;
+}
+
+.mb-15 {
+  margin-bottom: 1em;
+}
+
+.secondary_btn {
+  font-family: "prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: var(--textPrimary);
+  border-radius: 100px;
+  border: 1px solid var(--textPrimary);
+  outline: none;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  transition: 300ms all ease-in-out;
+}
+
+.secondary_btn:hover {
+  background: #fff;
+  color: var(--background);
+}
+
+.text_sec_16 {
+  font-family: "prompt";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--textSecondary);
+}
+
+.text_sec_14 {
+  font-family: "prompt";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: var(--textSecondary);
+}
+
+.text_pri_14 {
+  font-family: "ncs";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: var(--textPrimary);
+}
+
+.text_pri_32 {
+  font-family: "ncs";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.1em;
+  color: var(--textPrimary);
+}
+
+@media (max-width: 576px) {
+  .text_pri_32 {
+    font-size: 1.75em;
+    line-height: 36px;
+  }
+  .text_sec_16 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .text_pri_14,
+  .text_sec_14 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
