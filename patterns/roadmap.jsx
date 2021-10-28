@@ -24,14 +24,14 @@ const roadmaps = [
     name: "Third wave",
     description: [
       "Launch of the Aquarium",
-      "Stake your Whale Pass to earn 1 $KRILL per day",
+      "Stake your Whale Pass to earn 10 $KRILL per day",
     ],
   },
   {
     name: "Fourth wave",
     description: [
       "Launch of the Whale Store",
-      "Use your $KRILL to buy",
+      "Use your $KRILL to redeem",
       "Premint on partner projects",
       "Presale on partner projects",
       "Whitelist on partner projects",
@@ -98,7 +98,7 @@ const Roadmap = () => {
         </div>
         <ul>
           <li className="text_sec_14">Launch of the Whale Store</li>
-          <li className="text_sec_14">Use your $KRILL to buy</li>
+          <li className="text_sec_14">Use your $KRILL to redeem</li>
           <li className="text_sec_14">Premint on partner projects</li>
           <li className="text_sec_14">Whitelist on partner projects</li>
         </ul>

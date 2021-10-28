@@ -14,7 +14,7 @@ export const faqs = [
   },
   {
     question: "Staking",
-    ans: ["One WhaleShark  = 1 $KRILL per day"],
+    ans: ["One WhaleShark  = 10 $KRILL per day"],
   },
   {
     question: "$KRILL Utility (carries no financial value)",
