@@ -2,16 +2,16 @@ import { environment } from '../../environment';
 
 export const lengthOfAddress = 42;
 
-export async function setLocalStorageWalletStatus(address: string): Promise<void> {
+export async function setLocalStorageWalletStatus(address) {
   await window.localStorage.setItem(environment.localStorageKeys.walletAddress, address);
 }
 
-export function getLocalStorageWalletAddress(): string {
+export function getLocalStorageWalletAddress() {
   const address = window.localStorage.getItem(environment.localStorageKeys.walletAddress);
   return address || '';
 }
 
-export function reduceTheWalletAddress(walletAddress: string | undefined): string {
+export function reduceTheWalletAddress(walletAddress) {
   if(walletAddress === undefined) {
     return '';
   }
@@ -22,7 +22,7 @@ export function reduceTheWalletAddress(walletAddress: string | undefined): strin
   return reducedAddress;
 }
 
-export function cutWalletAddress(walletAddress: string | undefined): string {
+export function cutWalletAddress(walletAddress) {
   if(walletAddress === undefined) {
     return '';
   }

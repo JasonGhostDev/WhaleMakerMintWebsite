@@ -1,6 +1,6 @@
 import { store } from 'react-notifications-component';
 
-export function toast(type: any, message: string): void {
+export function toast(type, message) {
 
   store.addNotification({
     title: '',

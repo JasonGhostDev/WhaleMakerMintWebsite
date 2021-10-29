@@ -8,7 +8,6 @@ import {lengthOfAddress} from "../utils/wallet";
 import {useUser} from "../core/user/user-context";
 
 const Hero = () => {
-  // const { activate, account, active } = useWeb3React();
     const { walletAddress, connectWallet } = useUser();
 
   const renderSocialMediaLinks = (

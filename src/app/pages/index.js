@@ -4,10 +4,15 @@ import ReactNotification from 'react-notifications-component'
 
 import Hero from "../patterns/hero";
 import Story from "../patterns/story";
+<<<<<<< HEAD
 
 import Roadmap from "../patterns/roadmap";
 import Faqs from "../patterns/faqs";
 
+=======
+import Roadmap from "../patterns/roadmap";
+import Faqs from "../patterns/faqs";
+>>>>>>> 442755e3cd4e2673b8a0b6261a1bcf5c8a30ebcb
 
 import Footer from "../patterns/footer";
 import Mint from "../patterns/mint";
