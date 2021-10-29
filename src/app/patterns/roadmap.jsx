@@ -1,47 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 
-const roadmaps = [
-  {
-    name: "First wave",
-    description: [
-      "1000 Whale Sharks will be minted",
-      "Private sale ONLY",
-      `You must meet OG Whale Status see server ${(
-        <a href="https://discord.gg/Npfz78G5">https://discord.gg/Npfz78G5</a>
-      )}`,
-      "Launch of WhaleMakerDAO",
-    ],
-  },
-  {
-    name: "Second wave",
-    description: [
-      "Top industry artists is minting only 1000 Whale Sharks",
-      "Launch of Whale Shark Alpha Chat",
-    ],
-  },
-  {
-    name: "Third wave",
-    description: [
-      "Launch of the Aquarium",
-      "Stake your Whale Pass to earn 10 $KRILL per day",
-    ],
-  },
-  {
-    name: "Fourth wave",
-    description: [
-      "Launch of the Whale Store",
-      "Use your $KRILL to redeem",
-      "Premint on partner projects",
-      "Presale on partner projects",
-      "Whitelist on partner projects",
-    ],
-  },
-  {
-    name: "Fifth wave",
-    description: ["Coming Soon"],
-  },
-];
+
 //text_sec_14
 //text_pri_14;
 const Roadmap = () => {
