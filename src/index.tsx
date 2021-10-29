@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import reportWebVitals from './reportWebVitals';
 
-import './style.scss';
 import Home from "./app/pages";
 
 ReactDOM.render(
