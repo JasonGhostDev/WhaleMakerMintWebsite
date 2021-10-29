@@ -5,11 +5,11 @@ import styles from "../styles/Home.module.css";
 
 import Metamask from "../utils/connector";
 import {useUser} from "../core/user/user-context";
-import {lengthOfAddress} from "../utils/wallet";
+import {lengthOfAddress, setLocalStorageWalletStatus} from "../utils/wallet";
 
 const Header = () => {
 
-    const { walletAddress, connectWallet } = useUser();
+    const { walletAddress, connectWallet, setWalletAddress } = useUser();
 
   return (
     <div className={styles.header}>
@@ -24,8 +24,15 @@ const Header = () => {
       </Link>
       <button
         className={styles.connect}
-        onClick={walletAddress.length === lengthOfAddress ? null : () => {
-            connectWallet()
+        onClick={async () => {
+            console.log('aaa')
+            if(walletAddress.length === lengthOfAddress) {
+
+                setWalletAddress('');
+                setLocalStorageWalletStatus('').then();
+            } else {
+                await connectWallet();
+            }
         }}
       >
         <span>

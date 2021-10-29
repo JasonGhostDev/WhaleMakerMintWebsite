@@ -1,13 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/patterns/hero.module.css";
 
-import {lengthOfAddress} from "../utils/wallet";
+
+import {getLocalStorageWalletAddress, lengthOfAddress, setLocalStorageWalletStatus} from "../utils/wallet";
 import {useUser} from "../core/user/user-context";
 
 const Hero = () => {
-    const { walletAddress, connectWallet } = useUser();
+    const { walletAddress, connectWallet, setWalletAddress } = useUser();
+
+    useEffect(async () => {
+        loadWallet();
+    },[])
+
+    const loadWallet = async () => {
+        if(getLocalStorageWalletAddress() !== '') {
+            console.log(getLocalStorageWalletAddress());
+            setWalletAddress(getLocalStorageWalletAddress());
+        } else {
+            setWalletAddress(' ');
+        }
+    }
 
   const renderSocialMediaLinks = (
     <div className={styles.flex}>
@@ -46,10 +60,15 @@ const Hero = () => {
             />
           </Link>
           <button
-            className={styles.connect}
-            onClick={walletAddress.length === lengthOfAddress ? null : () => {
-                connectWallet()
-            }}
+              className={styles.connect}
+              onClick={async () => {
+                  if(walletAddress.length === lengthOfAddress) {
+                      setWalletAddress('');
+                      setLocalStorageWalletStatus('').then();
+                  } else {
+                      await connectWallet();
+                  }
+              }}
           >
             <span>
               {walletAddress.length === lengthOfAddress
@@ -70,7 +89,6 @@ const Hero = () => {
           <p className="text_sec_16" style={{ fontSize: "1.2em" }}>
             Each Whale Adoption is 0.5 + gas OG Whale Mint
           </p>
-          <button className={styles.primaryBtn}>CLAIM</button>
           {renderSocialMediaLinks}
         </div>
       </div>

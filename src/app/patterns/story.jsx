@@ -55,7 +55,7 @@ const Story = () => {
             <p
               className="text_sec_16"
               style={{ margin: "1em 0 1.5em" }}
-              className="text_sec_16"
+              
             >
               <span
                 style={{ fontWeight: "bold", fontSize: "1.1em" }}
@@ -74,7 +74,7 @@ const Story = () => {
             <p
               className="text_sec_16"
               style={{ margin: "1em 0 1.5em" }}
-              className="text_sec_16"
+             
             >
               <span
                 style={{ fontWeight: "bold", fontSize: "1.1em" }}
@@ -116,41 +116,7 @@ const Story = () => {
     </div>
   );
 
-  const renderTheStory = (
-    <div className={styles.story_block}>
-      <div className={styles.block_grid}>
-        <div>
-          <img src="/images/story1.png" alt="whale" />
-        </div>
-        <div>
-          <img src="/images/story2.png" alt="whale" />
-        </div>
-        <div>
-          <img src="/images/story3.png" alt="whale" />
-        </div>
-        <div>
-          <img src="/images/story4.png" alt="whale" />
-        </div>
-      </div>
-      <div>
-        <p className="text_pri_32">The Story Behind The Whale Maker</p>
-        <p className="text_sec_16" style={{ margin: "1.5em 0" }}>
-          What started as a simple Discord Community has grown into one of the
-          most sought after clubs “The OG Whales”.
-        </p>
-        <p className="text_sec_16" style={{ margin: "1.5em 0" }}>
-          The group seeks out and votes on verifying other NFT Projects. Once
-          verified they provide the full support of their community, promotion
-          army, press team, and marketing teams.
-        </p>
-        <p className="text_sec_16">
-          When the whales move.. They make waves. Less than 5% of projects that
-          apply for verification receive it. This is the #1 Community to find
-          and gain access to the best NFT Projects on the Market.
-        </p>
-      </div>
-    </div>
-  );
+
 
   return (
     <div className={styles.story} style={{ width: "60%", margin: "0 auto" }}>

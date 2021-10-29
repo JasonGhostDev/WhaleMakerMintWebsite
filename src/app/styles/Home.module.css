@@ -24,6 +24,7 @@
 }
 
 .primaryBtn {
+  width: fit-content;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -53,7 +54,8 @@
 
 .mintCard {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: #0a131c;
   border-radius: 8px;
   padding: 1.5em;

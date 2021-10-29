@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { UserContext } from './user-context';
 import { setLocalStorageWalletStatus } from '../../utils/wallet';
 import { toast } from '../../utils/notification.util';
-import { isEthNetwork } from '../../utils/network/user'
+
+import Web3Modal from "web3modal";
+// @ts-ignore
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3 from "web3";
+import {Simulate} from "react-dom/test-utils";
+
 
 declare global {
     interface Window {
@@ -16,36 +22,69 @@ export const UserProvider = (props: React.PropsWithChildren<{}>) => {
   const [walletAddress, setWalletAddress] = useState<string>('');
   const [token, setToken] = useState<string>('');
   const [pageIndex, setPageIndex] = useState<number>(-1);
+  const [ethWeb3, setEthWeb3] = useState<any>();
 
-    const connectWallet = () => {
-        if(window.ethereum) {
-            window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(handleAccountsChanged)
-                .catch(async (err: any) => {
-                    setWalletAddress('');
-                    setLocalStorageWalletStatus('').then();
-                    if (err.code === 4001) {
-                        toast('danger', 'Please connect to MetaMask.');
-                    }
-                });
-        } else {
-            toast('danger', 'Please install Metamask.')
-        }
+    const providerOptions = {
+        walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+                infuraId: '9aa3d95b3bc440fa88ea12eaa4456161'
+            }
+        },
+    };
+
+    const web3Modal = new Web3Modal({
+        network: "mainnet", // optional
+        cacheProvider: true, // optional
+        providerOptions // required
+    });
+
+    const connectWallet = async () => {
+        const provider = await web3Modal.connect();
+        const web3 = new Web3(provider);
+        await subscribeProvider(provider);
+        setEthWeb3(web3);
     }
 
+    const bscNetworkChainId = '0x4';
+
+    const isEthNetwork = async () => {
+        if(!ethWeb3) {
+            return;
+        }
+        const chainId = ethWeb3.eth.getChainId();
+        if (chainId.toLocaleUpperCase() !== bscNetworkChainId.toLocaleUpperCase()) {
+            toast('danger', 'Please select network of MetaMask as "Ether Main Net"');
+            return false;
+        }
+        return true;
+    };
+
+    const subscribeProvider = async (provider: any) => {
+        if (!provider.on) {
+            return;
+        }
+        provider.on("close", () => {
+            setWalletAddress('');
+        });
+        provider.on("accountsChanged", handleAccountsChanged);
+        provider.on("chainChanged", async (chainId: number) => {
+
+        });
+
+        provider.on("networkChanged", async (networkId: number) => {
+
+        });
+    };
+
     const handleAccountsChanged = async (accounts: string[]) => {
-        if (!await isEthNetwork()) {
+        if(accounts.length === 0) {
             setWalletAddress('');
             setLocalStorageWalletStatus('').then();
-            return;
+        } else {
+            setWalletAddress(accounts[0]);
+            setLocalStorageWalletStatus(accounts[0]).then();
         }
-        if (!accounts || !accounts.length) {
-            setWalletAddress('');
-            setLocalStorageWalletStatus('').then();
-            toast('danger', 'Please connect to MetaMask.');
-            return;
-        }
-        setWalletAddress(accounts[0])
     }
 
   return (
@@ -57,6 +96,7 @@ export const UserProvider = (props: React.PropsWithChildren<{}>) => {
       connectWallet: connectWallet,
       pageIndex: pageIndex,
       setPageIndex: setPageIndex,
+      ethWeb3: ethWeb3,
     }}>
       { props.children }
     </UserContext.Provider>
