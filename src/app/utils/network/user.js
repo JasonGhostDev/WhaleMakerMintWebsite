@@ -19,7 +19,7 @@ export const isEthNetwork = async () => {
     return true;
 };
 
-export function getUserByWalletAddress(walletAddress: string) {
+export function getUserByWalletAddress(walletAddress) {
     return fetch(`${ environment.serverUrl }/user/${walletAddress}`, {
         headers: {
             'Content-Type': 'application/json'
@@ -28,6 +28,6 @@ export function getUserByWalletAddress(walletAddress: string) {
     }).then(handleResponse)
 }
 
-function handleResponse(response: any) {
+function handleResponse(response) {
     return response.json();
 }
