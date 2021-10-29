@@ -4,10 +4,8 @@ import ReactNotification from 'react-notifications-component'
 
 import Hero from "../patterns/hero";
 import Story from "../patterns/story";
-import NftCollection from "../patterns/nftCollection";
 import Roadmap from "../patterns/roadmap";
 import Faqs from "../patterns/faqs";
-import Teams from "../patterns/teams";
 
 import Footer from "../patterns/footer";
 import Mint from "../patterns/mint";

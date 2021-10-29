@@ -1,14 +1,12 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../styles/patterns/hero.module.css";
 
-import Metamask from "../utils/connector";
 import {lengthOfAddress} from "../utils/wallet";
 import {useUser} from "../core/user/user-context";
 
 const Hero = () => {
-  // const { activate, account, active } = useWeb3React();
     const { walletAddress, connectWallet } = useUser();
 
   const renderSocialMediaLinks = (
