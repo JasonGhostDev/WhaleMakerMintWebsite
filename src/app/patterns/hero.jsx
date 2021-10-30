@@ -12,7 +12,7 @@ const Hero = () => {
 
     useEffect(() => {
         loadWallet().then();
-    },[])
+    })
 
     const loadWallet = async () => {
         if(getLocalStorageWalletAddress() !== '') {
