@@ -2,14 +2,6 @@ import React, {useEffect, useState} from "react";
 import { BigNumber } from 'bignumber.js';
 import cn from "classnames";
 import Web3 from "web3";
-import {
-    Modal,
-    ModalHeader,
-    ModalBody,
-    ModalFooter,
-    Input,
-    Button,
-} from 'reactstrap';
 
 import {whaleSharkAddress} from "./web3-abi-address/address";
 import {whaleSharkAbi} from "./web3-abi-address/abi";

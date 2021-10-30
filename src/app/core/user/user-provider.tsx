@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 import { UserContext } from './user-context';
 import { setLocalStorageWalletStatus } from '../../utils/wallet';
@@ -8,8 +8,6 @@ import Web3Modal from "web3modal";
 // @ts-ignore
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3";
-import {Simulate} from "react-dom/test-utils";
-
 
 declare global {
     interface Window {
@@ -47,18 +45,6 @@ export const UserProvider = (props: React.PropsWithChildren<{}>) => {
     }
 
     const bscNetworkChainId = '0x4';
-
-    const isEthNetwork = async () => {
-        if(!ethWeb3) {
-            return;
-        }
-        const chainId = ethWeb3.eth.getChainId();
-        if (chainId.toLocaleUpperCase() !== bscNetworkChainId.toLocaleUpperCase()) {
-            toast('danger', 'Please select network of MetaMask as "Ether Main Net"');
-            return false;
-        }
-        return true;
-    };
 
     const subscribeProvider = async (provider: any) => {
         if (!provider.on) {
