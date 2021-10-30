@@ -1,1 +1,1 @@
-export const whaleSharkAddress = '0xCF5D273a92A80304DdbCd3c94B66C8DE130787e7';
+export const whaleSharkAddress = '0xFe212549Ed8D3AA4d8ED16BCfcaF248003aA8f7F';

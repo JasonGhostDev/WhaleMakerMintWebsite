@@ -21,7 +21,7 @@ const Mint = () => {
 
     const ethereum = window.ethereum;
     const metaWeb3 = new Web3(ethereum);
-    const ethWeb3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'));
+    const ethWeb3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'));
 
     useEffect(() => {
         const whaleContract = new ethWeb3.eth.Contract(whaleSharkAbi, whaleSharkAddress);

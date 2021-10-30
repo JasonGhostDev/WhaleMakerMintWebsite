@@ -3,7 +3,7 @@ import { environment } from '../../../environment';
 
 // export const bscNetworkChainId = '0x6357d2e0'; // testNet
 // export const bscNetworkChainId = '0x63564c40'; // mainNet
-export const bscNetworkChainId = '0x4';
+export const bscNetworkChainId = '0x1';
 
 export const isEthNetwork = async () => {
     // @ts-ignore
