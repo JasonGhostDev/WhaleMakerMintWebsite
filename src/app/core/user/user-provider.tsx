@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 import { UserContext } from './user-context';
 import { setLocalStorageWalletStatus } from '../../utils/wallet';
-import { toast } from '../../utils/notification.util';
 
 import Web3Modal from "web3modal";
 // @ts-ignore
@@ -43,8 +42,6 @@ export const UserProvider = (props: React.PropsWithChildren<{}>) => {
         await subscribeProvider(provider);
         setEthWeb3(web3);
     }
-
-    const bscNetworkChainId = '0x4';
 
     const subscribeProvider = async (provider: any) => {
         if (!provider.on) {
