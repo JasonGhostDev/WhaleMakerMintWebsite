@@ -9,7 +9,6 @@ export type UserContextType = {
   connectWallet: () => void;
   pageIndex: number,
   setPageIndex: (pageIndex: number) => void;
-  ethWeb3: any;
 }
 
 export const UserContext = createContext<UserContextType>({
@@ -19,8 +18,7 @@ export const UserContext = createContext<UserContextType>({
   setToken: (token: string) => {},
   connectWallet: () => {},
   pageIndex: -1,
-  setPageIndex: () => {},
-  ethWeb3: null,
+  setPageIndex: () => {}
 });
 
 export const useUser = () => useContext(UserContext);

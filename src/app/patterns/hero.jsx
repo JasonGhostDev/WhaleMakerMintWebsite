@@ -5,10 +5,11 @@ import styles from "../styles/patterns/hero.module.css";
 
 
 import {getLocalStorageWalletAddress, lengthOfAddress, setLocalStorageWalletStatus} from "../utils/wallet";
+
 import {useUser} from "../core/user/user-context";
 
 const Hero = () => {
-    const { walletAddress, connectWallet, setWalletAddress } = useUser();
+  const { walletAddress, connectWallet } = useUser();
 
     useEffect(() => {
         loadWallet().then();
@@ -17,9 +18,9 @@ const Hero = () => {
     const loadWallet = async () => {
         if(getLocalStorageWalletAddress() !== '') {
             console.log(getLocalStorageWalletAddress());
-            setWalletAddress(getLocalStorageWalletAddress());
+           
         } else {
-            setWalletAddress(' ');
+           
         }
     }
 
@@ -63,7 +64,7 @@ const Hero = () => {
               className={styles.connect}
               onClick={async () => {
                   if(walletAddress.length === lengthOfAddress) {
-                      setWalletAddress('');
+                     
                       setLocalStorageWalletStatus('').then();
                   } else {
                       await connectWallet();
