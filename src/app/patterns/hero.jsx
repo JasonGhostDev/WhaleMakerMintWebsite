@@ -10,8 +10,8 @@ import {useUser} from "../core/user/user-context";
 const Hero = () => {
     const { walletAddress, connectWallet, setWalletAddress } = useUser();
 
-    useEffect(async () => {
-        loadWallet();
+    useEffect(() => {
+        loadWallet().then();
     },[])
 
     const loadWallet = async () => {
