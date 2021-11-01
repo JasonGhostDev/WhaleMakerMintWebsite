@@ -9,6 +9,7 @@ import Roadmap from "../patterns/roadmap";
 import Faqs from "../patterns/faqs";
 import Footer from "../patterns/footer";
 import Mint from "../patterns/mint";
+//import Teams from "../patterns/teams";
 import {UserProvider} from "../core/user/user-provider";
 
 import 'react-notifications-component/dist/theme.css'
@@ -28,7 +29,7 @@ export default function Home() {
               {/* <NftCollection /> */}
               <Roadmap />
               <Faqs />
-              {/* <Teams /> */}
+             {/*  <Teams /> */} 
             </div>
             <Footer />
           </Router>

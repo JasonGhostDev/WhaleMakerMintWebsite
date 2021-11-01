@@ -26,6 +26,9 @@ const Teams = () => {
                 <a href={data.discord_link}>
                   <img src="/icons/discord.svg" alt="discord" />
                 </a>
+                <a href={data.discord_link}>
+                  <img src="/icons/linkedin.svg" alt="linkedin" />
+                </a>
               </div>
             </div>
           </div>

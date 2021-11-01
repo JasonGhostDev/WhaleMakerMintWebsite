@@ -1,27 +1,63 @@
 export const teams = [
   {
     image: "/images/team1.png",
-    name: "Marvin McKinney",
+    name: "Roger Bryan",
     description:
-      "Felis, penatibus senectus cum erat laoreet in proin sed cursus. Sed imperdiet turpis vel dignissim mauris lectus. A fames etiam eg.",
+      "Alpha Shark",
     github_link: "/",
-    twitter_link: "/",
+    twitter_link: "https://twitter.com/booknerd_eth",
     discord_link: "/",
   },
   {
     image: "/images/team2.png",
-    name: "Marvin McKinney",
+    name: "Richard Lorenzen",
     description:
-      "Felis, penatibus senectus cum erat laoreet in proin sed cursus. Sed imperdiet turpis vel dignissim mauris lectus. A fames etiam eg.",
+      "Marketing Shark",
     github_link: "/",
     twitter_link: "/",
     discord_link: "/",
   },
   {
     image: "/images/team3.png",
-    name: "Marvin McKinney",
+    name: "0xJason",
     description:
-      "Felis, penatibus senectus cum erat laoreet in proin sed cursus. Sed imperdiet turpis vel dignissim mauris lectus. A fames etiam eg.",
+      "Lead Dev Shark",
+    github_link: "github.com/jasonGhostDev",
+    twitter_link: "/",
+    discord_link: "/",
+  },
+  {
+    image: "/images/team3.png",
+    name: "MUSA",
+    description:
+      "Artist Shark",
+    github_link: "/",
+    twitter_link: "/",
+    discord_link: "/",
+  },
+  {
+    image: "/images/team3.png",
+    name: "Kevin Harrington",
+    description:
+      "Alpha Shark Maker",
+    github_link: "/",
+    twitter_link: "/",
+    discord_link: "/",
+  },
+  {
+    image: "/images/team3.png",
+    name: "Brian Harrington",
+    description:
+      "Shark Maker",
+    github_link: "/",
+    twitter_link: "/",
+    discord_link: "/",
+  },
+  {
+    image: "/images/team3.png",
+    name: "Brandon T. Adams",
+    description:
+      "Shark Maker",
     github_link: "/",
     twitter_link: "/",
     discord_link: "/",

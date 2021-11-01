@@ -66,23 +66,16 @@ const Mint = () => {
                                 toast('danger', 'Please input mint count.')
                                 return;
                             }
-                            if(mintCount > 2)
-                            {
-                                toast('danger', 'Max mint amount is 2')
-                                return;
-                            }
+                           
                             const whaleContract = new metaWeb3.eth.Contract(whaleSharkAbi, whaleSharkAddress);
                             whaleContract.methods.walletOfOwner(walletAddress).call().then(mintedCount => {
                                 console.log(Number(mintedCount.length) + Number(mintCount));
-                                if(Number(mintedCount.length) + Number(mintCount) > 2) {
-                                    toast('danger', "Maximum of mint per wallet is 2 WHALESHARKS.")
-                                    toast('danger', "You have already minted "+ mintedCount.length + " WHALESHARKS")
-                                } else {
+                              
 
                                     whaleContract.methods.mintWhale(mintCount).send({ from: walletAddress, value: primaryPrice*mintCount }).then((result) => {
                                         toast('success', 'SUCCESS');
                                     });
-                                }
+                               
                             });
                         } else {
                             connectWallet();
