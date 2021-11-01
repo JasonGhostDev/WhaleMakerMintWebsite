@@ -17,18 +17,27 @@ const Teams = () => {
                 {data.description}
               </p>
               <div className={styles.flex_icons}>
-                <a href={data.github_link}>
-                  <img src="/icons/github.svg" alt="github" />
-                </a>
-                <a href={data.twitter_link}>
-                  <img src="/icons/twitter.svg" alt="twiiter" />
-                </a>
-                <a href={data.discord_link}>
-                  <img src="/icons/discord.svg" alt="discord" />
-                </a>
-                <a href={data.discord_link}>
-                  <img src="/icons/linkedin.svg" alt="linkedin" />
-                </a>
+                {data.github_link &&
+                  <a href={data.github_link}>
+                    <img src="/icons/github.svg" alt="github" />
+                  </a>
+                }
+                {data.twitter_link &&
+                  <a href={data.twitter_link}>
+                    <img src="/icons/twitter.svg" alt="twiiter" />
+                  </a>
+                }
+                {data.discord_link &&
+                  <a href={data.discord_link}>
+                    <img src="/icons/discord.svg" alt="discord" />
+                  </a>
+                }
+
+                {data.linkedin_link &&
+                  <a href={data.linkedin_link}>
+                    <img src="/icons/linkedin.svg" alt="linkedin" />
+                  </a>
+                }
               </div>
             </div>
           </div>
