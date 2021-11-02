@@ -131,6 +131,7 @@
 @media (max-width: 768px) {
   .story {
     padding: 2em;
+    width: 80% !important
   }
   .market {
     grid-template-columns: 1fr;

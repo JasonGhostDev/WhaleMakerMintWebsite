@@ -151,6 +151,14 @@
 @media (max-width: 768px) {
   .faq {
     padding: 2em;
+    width: 80%;
+  }
+
+  .roadmap {
+    width:80%
+  }
+  .roadmapCard ul {
+    margin-left: 0.8em;
   }
 }
 
