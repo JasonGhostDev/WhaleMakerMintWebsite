@@ -43,7 +43,10 @@ const Mint = () => {
     return (
         <div className={styles.faq}>
             <p className="text_pri_32" style={{ textAlign: "center", width: "100%" }}>
-                MINT
+                MINTING STARTED
+            </p>
+            <p className="text_pri_32" style={{ textAlign: "center", width: "100%" }}>
+                (WhiteList Only) 
             </p>
             <div className={styles.faqCardWrapper}>
                 <div className={cn(styles.mintCard)}>
