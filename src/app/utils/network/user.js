@@ -13,7 +13,7 @@ export const isEthNetwork = async () => {
     }
     const chainId = await ethereum.request({ method: 'eth_chainId' });
     if (chainId.toLocaleUpperCase() !== bscNetworkChainId.toLocaleUpperCase()) {
-        toast('danger', 'Please select network of MetaMask as "Rikeybt Network"');
+        toast('danger', 'Please select network of MetaMask as "Main Network"');
         return false;
     }
     return true;
