@@ -24,9 +24,9 @@ export const teams = [
     name: "0xJason",
     description:
       "Lead Dev Shark",
-    github_link: "github.com/jasonGhostDev",
+    github_link: "",
    
-    linkedin_link: "https://www.linkedin.com/in/jason-lee-10800420b/",
+    linkedin_link: "",
   },
   {
     image: "",
